@@ -6,6 +6,8 @@ import (
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/gorilla/handlers"
 )
 
 var (
@@ -14,14 +16,13 @@ var (
 )
 
 func main() {
-
 	flag.IntVar(&port, "p", 8080, "Port to bind")
 	flag.StringVar(&webroot, "r", "", "root")
 	flag.Parse()
 
 	if webroot == "" {
-		if len(os.Args) > 1 {
-			webroot = os.Args[1]
+		if len(flag.Args()) > 0 {
+			webroot = flag.Args()[0]
 		} else {
 			cwd, _ := os.Getwd()
 			webroot = cwd
@@ -32,8 +33,6 @@ func main() {
 	host := fmt.Sprintf(":%d", port)
 	fmt.Printf("Binding to %s\n", host)
 
-	//panic(http.ListenAndServe(host, http.FileServer(http.Dir(webroot))))
-	//fmt.Println(webroot)
 	fileServer := http.FileServer(http.Dir(webroot))
-	log.Fatal(http.ListenAndServe(host, fileServer))
+	log.Fatal(http.ListenAndServe(host, handlers.LoggingHandler(os.Stdout, fileServer)))
 }
