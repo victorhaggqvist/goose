@@ -17,7 +17,7 @@ var (
 
 func main() {
 	flag.IntVar(&port, "p", 8080, "Port to bind")
-	flag.StringVar(&webroot, "r", "", "root")
+	flag.StringVar(&webroot, "r", "", "Webroot (default cwd)")
 	flag.Parse()
 
 	if webroot == "" {
