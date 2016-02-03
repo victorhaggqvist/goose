@@ -1,0 +1,10 @@
+{
+	"ImportPath": "snilius.com/goose",
+	"GoVersion": "go1.5",
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/handlers",
+			"Rev": "7409928170f9f1cbaa874840dc4ff8df161a6c25"
+		}
+	]
+}
