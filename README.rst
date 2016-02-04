@@ -4,7 +4,7 @@ goose
 
 Synposis
 ========
-    goose [options] `[webroot]`_
+goose [options] `[webroot]`_
 
 .. _[webroot]: webroot_
 
