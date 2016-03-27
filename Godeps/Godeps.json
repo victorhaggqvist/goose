@@ -1,6 +1,6 @@
 {
 	"ImportPath": "snilius.com/goose",
-	"GoVersion": "go1.5",
+	"GoVersion": "go1.6",
 	"Deps": [
 		{
 			"ImportPath": "github.com/gorilla/handlers",
