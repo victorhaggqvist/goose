@@ -10,7 +10,8 @@ import (
 	flag "github.com/victorhaggqvist/pflag"
 )
 
-const version = "0.1.1"
+var version = "set dymaic on build"
+
 const usage = `
 Usage: goose [options...] [webroot]
 webroot defaults to current working directory

@@ -10,9 +10,9 @@ goose [options] `[webroot]`_
 
 Description
 ===========
-goose is a cli-webserver intended to be a drop-in replacement to :code:`python2 -m SimpleHTTPServer`.
+goose is a cli-webserver intended to be a drop-in replacement for :code:`python2 -m SimpleHTTPServer`.
 It comes with some nice things like being able to easily specify webroot.
-To prevent acceidental exposure it also binds to `127.0.0.1` be default.
+To prevent acceidental exposure it also binds to `127.0.0.1` by default.
 
 webroot
 -------
@@ -23,3 +23,7 @@ Options
 --export, -e    Bind server to 0.0.0.0
 --port int, -p  Port to bind (default 8080)
 --quiet, -q     Run in quiet mode, ie. no logs
+
+License
+=======
+MIT

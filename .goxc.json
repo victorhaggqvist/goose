@@ -1,0 +1,23 @@
+{
+    "ArtifactsDest": "build",
+    "Tasks": [
+        "default"
+    ],
+    "BuildConstraints": "linux,!arm darwin,amd64 windows,amd64",
+    "TaskSettings": {
+        "publish-github": {
+            "owner": "victorhaggqvist",
+            "repository": "goose"
+        },
+        "bintray" : {
+            "package" : "goose",
+            "subject": "atriix",
+            "repository": "goose",
+            "downloadspage": "bintray.md"
+        }
+    },
+    "ConfigVersion": "0.9",
+    "Resources": {
+        "Include": "INSTALL*,README*,LICENSE*,docs/_build/man/goose.1"
+    }
+}
