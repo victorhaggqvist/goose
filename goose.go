@@ -10,7 +10,7 @@ import (
 	flag "github.com/victorhaggqvist/pflag"
 )
 
-const version = "1.0"
+const version = "0.1.1"
 const usage = `
 Usage: goose [options...] [webroot]
 webroot defaults to current working directory
