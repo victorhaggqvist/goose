@@ -1,2 +1,4 @@
 goose
 build
+.goxc.local.json
+docs/_build

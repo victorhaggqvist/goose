@@ -20,3 +20,7 @@ html:
 .PHONY: man
 man:
 	pushd docs && make man && popd
+
+.PHONY: upload
+upload:
+	goxc -pv="$(VERSION)" bintray
