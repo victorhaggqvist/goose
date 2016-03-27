@@ -22,3 +22,4 @@ Options
 =======
 --export, -e    Bind server to 0.0.0.0
 --port int, -p  Port to bind (default 8080)
+--quiet, -q     Run in quiet mode, ie. no logs

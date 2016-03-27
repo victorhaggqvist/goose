@@ -21,11 +21,13 @@ Options:
 var (
 	port   int
 	export bool
+	quiet  bool
 )
 
 func main() {
 	flag.IntVarP(&port, "port", "p", 8080, "Port to bind")
 	flag.BoolVarP(&export, "export", "e", false, "Bind server to 0.0.0.0")
+	flag.BoolVarP(&quiet, "quiet", "q", false, "Run in quiet mode, ie. no logs")
 	flag.Version = version
 	flag.Usage = func() {
 		flag.PrintVersion()
@@ -50,5 +52,8 @@ func main() {
 	fmt.Printf("Binding to %s\n", host)
 
 	fileServer := http.FileServer(http.Dir(webroot))
-	log.Fatal(http.ListenAndServe(host, handlers.LoggingHandler(os.Stdout, fileServer)))
+	if !quiet {
+		fileServer = handlers.LoggingHandler(os.Stdout, fileServer)
+	}
+	log.Fatal(http.ListenAndServe(host, fileServer))
 }
