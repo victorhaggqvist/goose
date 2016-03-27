@@ -12,7 +12,7 @@
         "bintray" : {
             "package" : "goose",
             "subject": "atriix",
-            "repository": "goose",
+            "repository": "generic",
             "downloadspage": "bintray.md"
         }
     },
