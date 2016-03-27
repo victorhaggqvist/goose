@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/gorilla/handlers"
-	flag "snilius.com/pflag"
+	flag "github.com/victorhaggqvist/pflag"
 )
 
 const version = "1.0"
